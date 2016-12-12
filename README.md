@@ -2,10 +2,15 @@
 # vmdk 扩容 
 ## 在vitrualbox的宿主机上执行如下操作：
 [http://www.awaimai.com/1194.html](http://www.awaimai.com/1194.html)
+
+```
 VBoxManage clonehd "source.vmdk" "cloned.vdi" --format vdi
 VBoxManage modifyhd "cloned.vdi" --resize 51200
 VBoxManage clonehd "cloned.vdi" "resized.vmdk" --format vmdk
+```
+
 以上，是将原来的vmdk扩容至50GB (50 * 1024MB)。
+
 
 ## 将stroage挂载之后，登录到目标Linux上执行：
 
